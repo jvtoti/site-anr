@@ -550,3 +550,12 @@ footer.panel{padding-left:calc(var(--g) - var(--edge));padding-right:calc(var(--
 .top{padding-left:calc(var(--g) - var(--edge) - 10px);padding-right:calc(var(--g) - var(--edge) - 10px)}
 .nav{background:rgba(11,29,46,.55);border-color:rgba(255,255,255,.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .nav a{color:rgba(255,255,255,.88)}
+/* sobreposições de gradiente sempre por cima da foto */
+.ph img{z-index:auto}
+.hero .bg::after,.areas .bg::after,.cta .bg::after,.soon .bg::after,.overlay-pic::after{z-index:1}
+.ov-text{z-index:3}
+.overlay-pic::after{background:linear-gradient(90deg,rgba(11,29,46,0) 25%,rgba(11,29,46,.7) 55%,rgba(11,29,46,.92) 75%)}
+.grid-cards{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media (max-width:1280px){.grid-cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){.grid-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid-cards{grid-template-columns:1fr}}
